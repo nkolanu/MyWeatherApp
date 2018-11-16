@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MyWeatherApp"
+             x:Class="MyWeatherApp.MainPage">
+
+    <StackLayout Padding="10"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand">
+        
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="FillAndExpand"
+                     BackgroundColor="Gray">
+        
+            <Entry x:Name="cityName" 
+                   Placeholder="City Name"
+                   HeightRequest="40"
+                   HorizontalOptions="FillAndExpand"
+                   Margin="0,0,5,0"/>
+
+            <Button x:Name="getWeather"
+                    Text="Get"
+                    BackgroundColor="Azure"
+                    TextColor="Black"
+                    HeightRequest="40" 
+                    Clicked="GetWeather_Clicked"/>
+
+        </StackLayout>
+
+        <Label x:Name="cityTemp"
+               FontSize="75"
+               Text="0"
+               FontAttributes="Italic"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"/>
+        
+    </StackLayout>
+
+</ContentPage>
